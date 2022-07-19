@@ -63,7 +63,7 @@ class Model(object):
         with open(pred_file, "r") as f:
             reader = csv.reader(f)
             h = next(reader)[1:]
-            h = [c.upper().replace(",", "").replace("(", "").replace(")", "") for c in h]
+            h = [c.upper().replace(",", "").replace("(", "").replace(")", "").strip() for c in h]
             R = []
             for r in reader:
                 R += [{"outcomes": [Float(x) for x in r[1:]]}]
