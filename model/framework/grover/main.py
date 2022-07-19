@@ -16,6 +16,9 @@ from task.pretrain import pretrain_model
 from grover.data.torchvocab import MolVocab
 import scripts.save_features as sf
 
+import sys
+ROOT = os.path.dirname(os.path.abspath(__file__))
+
 class Namespace:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
@@ -35,7 +38,7 @@ def smiles_to_dataframe(txt_file_path):
     
     dummy_labels = pd.Series(np.zeros(df.shape[0]))
     
-    file = open('cols.txt', 'r')
+    file = open(os.path.join(ROOT, '..', 'cols.txt'), 'r')
 
     for line in file.readlines():
     	columns = line.split(',') 
