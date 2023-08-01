@@ -25,6 +25,8 @@ Prediction across the ToxCast toxicity panel, containing hundreds of toxicity ou
 
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos481p)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos481p.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos481p) (AMD64)
 
 ## Citation
 

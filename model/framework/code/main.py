@@ -33,18 +33,15 @@ def setup(seed):
     torch.backends.cudnn.deterministic = True
 
 def smiles_to_dataframe(txt_file_path):
-
-    
-    df = pd.read_csv(txt_file_path, header=None,  names=['smiles'])
-    
+    df = pd.read_csv(txt_file_path, header=None, names=['smiles'])
     dummy_labels = pd.Series(np.zeros(df.shape[0]))
     
     file = open(os.path.join(ROOT, '..', 'cols.txt'), 'r')
 
     for line in file.readlines():
-    	columns = line.split(',') 
-    names =    columns
-    
+        columns = line.split(',') 
+    names = columns
+        
     for n in names:
         df[n] = dummy_labels.values
 
@@ -54,30 +51,40 @@ def smiles_to_dataframe(txt_file_path):
     return input_csv_path
 
 tmp_folder = tempfile.mktemp()
-features_path = os.path.join(tmp_folder, "features.npz")    
+features_path = os.path.join(tmp_folder, "features.npz") 
 
 if __name__ == '__main__':
     # setup random seed
     setup(seed=42)
     # Avoid the pylint warning.
     a = MolVocab
-    # supress rdkit logger
+    # suppress rdkit logger
     lg = RDLogger.logger()
     lg.setLevel(RDLogger.CRITICAL)
 
     # Initialize MolVocab
     mol_vocab = MolVocab
 
-    input_txt_path =  sys.argv[1]
+    input_txt_path = sys.argv[1]
     output_path = sys.argv[2]
     csv_path = smiles_to_dataframe(input_txt_path)
-
     s = os.path.dirname(os.path.abspath(__file__))
     p = Path(s)
     model_path = str(p.parent.parent.absolute())
 
-    args = Namespace(batch_size=32, checkpoint_dir=model_path+'/framework/finetune/toxcast', checkpoint_path=None, checkpoint_paths=[model_path+'/framework/finetune/toxcast/fold_0/model_0/model.pt', model_path+'/framework/finetune/toxcast/fold_2/model_0/model.pt', model_path+'/framework/finetune/toxcast/fold_1/model_0/model.pt'], cuda=False, data_path=csv_path, ensemble_size=3, features_generator=None, features_path=[features_path], fingerprint=False, gpu=0, no_cache=True, no_features_scaling=True, output_path=output_path, parser_name='predict')
-    sf.save_features_main(csv_path,features_path)
+    args = Namespace(
+        batch_size=32, checkpoint_dir=model_path+'/checkpoints/finetune/toxcast',
+        checkpoint_path=None,
+        checkpoint_paths=[
+            model_path+'/checkpoints/finetune/toxcast/fold_0/model_0/model.pt',
+            model_path+'/checkpoints/finetune/toxcast/fold_2/model_0/model.pt',
+            model_path+'/checkpoints/finetune/toxcast/fold_1/model_0/model.pt'
+        ],
+        cuda=False, data_path=csv_path, ensemble_size=3, features_generator=None,
+        features_path=[features_path], fingerprint=False, gpu=0, no_cache=True,
+        no_features_scaling=True, output_path=output_path, parser_name='predict'
+    )
+    sf.save_features_main(csv_path, features_path)
     train_args = get_newest_train_args()
     avg_preds, test_smiles = make_predictions(args, train_args)
     write_prediction(avg_preds, test_smiles, args)
