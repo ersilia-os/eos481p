@@ -123,7 +123,7 @@ def save_features_main(input_path,features_path):
                         help='Maximum number of data points to load')
     parser.add_argument('--sequential', action='store_true', default=False,
                         help='Whether to task sequentially rather than in parallel')
-       
+  
     args = Namespace(data_path=input_path, features_generator='rdkit_2d_normalized', max_data_size=None, restart=True, save_frequency=10000, save_path=features_path, sequential=False)
 
     if args.save_path is None:
