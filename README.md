@@ -50,7 +50,12 @@ _10 of 617 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1534`
 - **Environment Size (Mb):** `2550`
+- **Image Size (Mb):** `7090.68`
 
+**Computational Performance (seconds):**
+- 10 inputs: `50.69`
+- 100 inputs: `451.79`
+- 10000 inputs: `-1`
 
 ### References
 - **Source Code**: [https://github.com/tencent-ailab/grover](https://github.com/tencent-ailab/grover)
