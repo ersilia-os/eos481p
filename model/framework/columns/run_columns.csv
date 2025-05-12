@@ -417,7 +417,7 @@ nvs_gpcr_hadrb2,float,high,Probability of the toxicity property of ToxCast datas
 nvs_gpcr_hadrb3,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
 nvs_gpcr_hdrd1,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
 nvs_gpcr_hdrd2s,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
-nvs_gpcr_hdrd4.4,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
+nvs_gpcr_hdrd44,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
 nvs_gpcr_hh1,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
 nvs_gpcr_hltb4_blt1,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
 nvs_gpcr_hm1,float,high,Probability of the toxicity property of ToxCast dataset from MoleculeNet
