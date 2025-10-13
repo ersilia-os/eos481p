@@ -2,8 +2,7 @@
 
 Prediction across the ToxCast toxicity panel, containing hundreds of toxicity outcomes, as part of the MoleculeNet benchmark. This model has been trained using the GROVER transformer (see eos7w6n or grover-embedding for a detail of the molecular featurization step with GROVER)
 
-This model was incorporated on 2022-07-13.
-
+This model was incorporated on 2022-07-13.Last packaged on 2025-10-13.
 
 ## Information
 ### Identifiers
@@ -51,11 +50,11 @@ _10 of 617 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1534`
 - **Environment Size (Mb):** `2564`
-- **Image Size (Mb):** `7090.68`
+- **Image Size (Mb):** `7173.09`
 
 **Computational Performance (seconds):**
-- 10 inputs: `50.69`
-- 100 inputs: `451.79`
+- 10 inputs: `34.56`
+- 100 inputs: `160.09`
 - 10000 inputs: `-1`
 
 ### References
