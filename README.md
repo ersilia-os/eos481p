@@ -2,7 +2,7 @@
 
 Prediction across the ToxCast toxicity panel, containing hundreds of toxicity outcomes, as part of the MoleculeNet benchmark. This model has been trained using the GROVER transformer (see eos7w6n or grover-embedding for a detail of the molecular featurization step with GROVER)
 
-This model was incorporated on 2022-07-13.Last packaged on 2025-10-13.
+This model was incorporated on 2022-07-13.Last packaged on 2026-03-10.
 
 ## Information
 ### Identifiers
@@ -44,17 +44,17 @@ _10 of 617 columns are shown_
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos481p](https://hub.docker.com/r/ersiliaos/eos481p)
-- **Docker Architecture:** `AMD64`, `ARM64`
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos481p.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos481p.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1534`
 - **Environment Size (Mb):** `2547`
-- **Image Size (Mb):** `7173.09`
+- **Image Size (Mb):** `7175.54`
 
 **Computational Performance (seconds):**
-- 10 inputs: `34.56`
-- 100 inputs: `160.09`
+- 10 inputs: `37.41`
+- 100 inputs: `163.17`
 - 10000 inputs: `-1`
 
 ### References
