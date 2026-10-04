@@ -1,6 +1,6 @@
 # ToxCast toxicity panel
 
-Prediction across the ToxCast toxicity panel, containing hundreds of toxicity outcomes, as part of the MoleculeNet benchmark. This model has been trained using the GROVER transformer (see eos7w6n or grover-embedding for a detail of the molecular featurization step with GROVER)
+Screens a compound against 617 in vitro assays from the ToxCast programme in a single pass, spanning nuclear receptor signalling, stress response pathways and cell viability readouts. The panel forms part of the MoleculeNet benchmark suite. A graph transformer pretrained without supervision on 10 million molecules was fine-tuned across all endpoints jointly. Coverage is highly uneven, since most compounds were tested in only a subset of assays, and many individual endpoints rest on very few actives.
 
 This model was incorporated on 2022-07-13.Last packaged on 2026-03-10.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2022-07-13.Last packaged on 2026-03-10.
 ### Output
 - **Output Dimension:** `617`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of toxicity against 617 biological targets
+- **Interpretation:** Probability of activity in each of 617 ToxCast in vitro assays.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
