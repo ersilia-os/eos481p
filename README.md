@@ -1,6 +1,6 @@
 # ToxCast toxicity panel
 
-Screens a compound against 617 in vitro assays from the ToxCast programme in a single pass, spanning nuclear receptor signalling, stress response pathways and cell viability readouts. The panel forms part of the MoleculeNet benchmark suite. A graph transformer pretrained without supervision on 10 million molecules was fine-tuned across all endpoints jointly. Coverage is highly uneven, since most compounds were tested in only a subset of assays, and many individual endpoints rest on very few actives.
+Screens a compound against 617 in vitro assays from the EPA ToxCast programme in a single pass, spanning nuclear receptor signalling, stress response pathways and cell viability readouts. The panel is distributed with MoleculeNet and covers 8,575 chemicals run through high-throughput screening. A graph transformer pretrained without supervision on 10 million molecules was fine-tuned across all endpoints jointly, and three fine-tuned folds are averaged. Coverage is highly uneven, since most compounds were tested in only a subset of assays and many endpoints rest on very few actives.
 
 This model was incorporated on 2022-07-13.Last packaged on 2026-03-10.
 
