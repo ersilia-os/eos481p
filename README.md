@@ -3,7 +3,7 @@
 Screens a compound against 617 in vitro assays from the EPA ToxCast programme in a single pass, spanning nuclear receptor signalling, stress response pathways and cell viability readouts. The panel is distributed with MoleculeNet and covers 8,575 chemicals run through high-throughput screening. A graph transformer pretrained without supervision on 10 million molecules was fine-tuned across all endpoints jointly, and three fine-tuned folds are averaged. Coverage is highly uneven, since most compounds were tested in only a subset of assays and many endpoints rest on very few actives.
 
 This model was incorporated on 2022-07-13.
-Last packaged on 2026-03-10.
+Last packaged on 2026-11-03.
 
 ## Information
 ### Identifiers
@@ -45,17 +45,17 @@ _10 of 617 columns are shown_
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos481p](https://hub.docker.com/r/ersiliaos/eos481p)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos481p.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos481p.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1534`
 - **Environment Size (Mb):** `2546`
-- **Image Size (Mb):** `7175.54`
+- **Image Size (Mb):** `4053.65`
 
 **Computational Performance (seconds):**
-- 10 inputs: `37.41`
-- 100 inputs: `163.17`
+- 10 inputs: `33.16`
+- 100 inputs: `161.1`
 - 10000 inputs: `-1`
 
 ### References
